@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración de las Organizaciones</title>
+
+    <link rel="stylesheet" href="principaladm.css">
+</head>
+<body>
+
+<header>
+
+    <div class="menu-btn" onclick="abrirMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div class="titulo-fondo">
+        <div class="franja blanca"></div>
+        <div class="franja negra"></div>
+        <div class="franja blanca"></div>
+         <h1 class="titulo">
+            ADMINISTRACION DE LAS<br>
+          ORGANIZACIONES
+         </h1>
+    </div>
+
+</header>
+
+<nav class="menu" id="menu">
+    <a href="materias.html">MATERIAS</a>
+    <a href="horarios.html">HORARIOS</a>
+    <a href="pasantias.html">PASANTIAS</a>
+    <a href="profes.html">PROFES</a>
+</nav>
+
+<div class="menu-overlay" id="menuOverlay" onclick="abrirMenu()"></div>
+
+<div class="contenido">
+
+    <div id="quees" class="seccion activa">
+        <h1></h1>
+        <p>
+           
+        </p>
+    </div>
+
+    <div id="horarios" class="seccion">
+        <h1>Horarios</h1>
+        <p>Colocá aquí los horarios.</p>
+    </div>
+
+    <div id="pasantias" class="seccion">
+        <h1>Pasantías</h1>
+        <p>Información sobre prácticas profesionalizantes.</p>
+    </div>
+
+    <div id="profes" class="seccion">
+        <h1>Profesores</h1>
+        <p>Listado de docentes.</p>
+    </div>
+
+    <img src="escudo.png" class="escudo" alt="Escudo">
+
+</div>
+
+<div class="linea-azul"></div>
+<div class="linea-blanca"></div>
+<div class="linea-negra"></div>
+<div class="linea-blanca"></div>
+<div class="linea-azul"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

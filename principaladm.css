@@ -1,0 +1,175 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Alfa Slab One", serif;
+}
+
+body{
+    background:#304d80;
+    cursor:url("cursor_calculadora.png"), auto;
+    overflow-x:hidden;
+}
+
+header{
+    background:#304d80;
+    min-height:200px;
+    position:relative;
+}
+
+.titulo-fondo{
+    position:relative;
+    width:100%;
+    min-height:170px;
+    top:40px;
+}
+
+.franja.blanca{
+    height:35px;
+    background:white;
+}
+
+.franja.negra{
+    height:60px;
+    background:black;
+}
+
+.titulo{
+    position:absolute;
+    width:100%;
+    top:5px;
+    text-align:center;
+    padding:0 60px; /* deja lugar al botón de menú */
+
+    color:#ece8d9;
+    font-size:clamp(24px, 6vw, 70px);
+    line-height:1.1;
+
+    text-shadow:
+        2px 2px 0 black,
+        -1px -1px 0 black;
+}
+
+.menu-btn{
+    position: fixed;
+    top: 20px;
+    left: 15px;
+    z-index: 1000;
+    cursor:pointer;
+}
+
+.menu-btn div{
+    width:clamp(45px, 9vw, 130px);
+    height:clamp(7px, 2vw, 22px);
+    margin:clamp(6px, 1.6vw, 23px) 0;
+    border-radius:20px;
+    background:#b4b4b4;
+}
+
+.menu{
+    position: fixed;
+    top: 0;
+    left: -85vw;
+    width: min(300px, 85vw);
+    height: 100vh;
+    overflow-y:auto;
+
+    background: #b4b4b4;
+    transition: left 0.4s ease;
+    z-index: 999;
+    padding-top: 90px;
+}
+
+.menu.activo{
+    left:0;
+}
+
+.menu a{
+    display:block;
+    width:85%;
+    margin:20px auto;
+    text-align:center;
+    text-decoration:none;
+    color:black;
+    background:white;
+    border:5px solid #304d80;
+    border-radius:40px;
+    padding:12px 8px;
+    font-size:clamp(16px, 3.5vw, 28px);
+    font-weight:bold;
+    letter-spacing:3px;
+}
+
+.menu a:hover{
+    background:#304d80;
+    color:white;
+    transform:scale(1.05);
+    transition:0.3s;
+}
+
+.contenido{
+    background:black;
+    min-height:473px;
+    position:relative;
+    padding-bottom:100px; /* deja lugar al escudo en celular */
+}
+
+.escudo{
+    position:absolute;
+    right:20px;
+    bottom:20px;
+    width:clamp(80px, 15vw, 140px);
+}
+
+.linea-azul{
+    height:25px;
+    background:#304d80;
+}
+
+.linea-blanca{
+    height:15px;
+    background:white;
+}
+
+.linea-negra{
+    height:35px;
+    background:black;
+}
+
+.seccion{
+    color:white;
+    padding:40px;
+    display:none;
+}
+
+.seccion.activa{
+    display:block;
+}
+
+/* CELULAR */
+@media(max-width:768px){
+    .seccion{
+        padding:24px 20px;
+    }
+
+    .seccion h1{
+        font-size:clamp(20px, 6vw, 32px);
+    }
+
+    .seccion p{
+        font-size:clamp(14px, 4vw, 18px);
+    }
+}
+
+/* Overlay para cerrar el menú tocando afuera, opcional si se agrega en el JS */
+.menu-overlay{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.4);
+    z-index:998;
+}
+
+.menu-overlay.activo{
+    display:block;
+}

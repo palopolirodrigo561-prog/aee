@@ -1,0 +1,129 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:black;
+    font-family:Arial, sans-serif;
+}
+
+/* ENCABEZADO */
+
+header{
+    background:#304d80;
+    min-height:200px;
+    position:relative;
+}
+
+.titulo-link{
+    text-decoration:none;
+}
+
+.titulo-fondo{
+    position:relative;
+    width:100%;
+    min-height:170px;
+    top:40px;
+}
+
+.franja.blanca{
+    height:35px;
+    background:white;
+}
+
+.franja.negra{
+    height:60px;
+    background:black;
+}
+
+.titulo{
+    position:absolute;
+    width:100%;
+    top:5px;
+    text-align:center;
+
+    color:#ece8d9;
+    font-size:clamp(22px, 6vw, 70px);
+    line-height:1.1;
+
+    text-shadow:
+        2px 2px 0 black,
+        -1px -1px 0 black;
+}
+
+/* CONTENIDO */
+
+.contenido{
+    min-height:460px;
+    background:black;
+    position:relative;
+    padding-bottom:110px; /* deja lugar al escudo en celular */
+}
+
+.titulo-pasantias{
+    text-align:center;
+
+    color:#ece8d9;
+
+    font-size:clamp(28px, 8vw, 70px);
+
+    padding-top:40px;
+
+    text-shadow:
+    2px 2px 0 black,
+    -1px -1px 0 black;
+}
+
+.texto{
+    color:white;
+    padding:clamp(16px, 5vw, 40px);
+    font-size:clamp(14px, 3.5vw, 18px);
+}
+
+.escudo{
+    width:clamp(80px, 15vw, 150px);
+
+    position:absolute;
+
+    right:20px;
+    bottom:20px;
+}
+
+/* PIE */
+
+.azul{
+    height:38px;
+    background:#304d80;
+}
+
+.blanca{
+    height:16px;
+    background:white;
+}
+
+.negra{
+    height:38px;
+    background:black;
+}
+
+/* CELULAR */
+
+@media(max-width:768px){
+    header{
+        min-height:150px;
+    }
+
+    .titulo-fondo{
+        min-height:130px;
+        top:0;
+    }
+}
+
+@media(max-width:420px){
+    .escudo{
+        right:12px;
+        bottom:12px;
+    }
+}

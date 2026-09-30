@@ -67,17 +67,16 @@ header{
 }
 
 .menu{
-    position: fixed;
-    top: 0;
-    left: -85vw;
-    width: min(300px, 85vw);
-    height: 100vh;
-    overflow-y:auto;
-
-    background: #b4b4b4;
-    transition: left 0.4s ease;
-    z-index: 999;
-    padding-top: 90px;
+  position: fixed;
+  top: 0;
+  left: -85vw;
+  width: min(300px, 85vw);
+  height: 100vh;
+  overflow-y: auto;
+  background: #b4b4b4;
+  transition: left 0.4s ease;
+  z-index: 999;
+  padding-top: clamp(90px, 16vw, 200px); /* antes: 90px */
 }
 
 .menu.activo{

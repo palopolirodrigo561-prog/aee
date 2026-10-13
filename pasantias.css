@@ -272,29 +272,27 @@ header{
 }
 
 @media(min-width:769px){
+    /* en compu queda igual que en el celular: celular arriba a la derecha
+       (con el texto a su izquierda) y la presentacion abajo */
     .marcos{
-        flex-direction:row-reverse;
-        align-items:flex-start;
-        justify-content:center;
-        gap:80px;
-        padding-bottom:50px;
+        gap:40px;
+        padding-top:30px;
+        padding-bottom:60px;
     }
     .col-video{
-        width:min(440px, 38%);
-        align-self:flex-end;       /* el video queda mas abajo */
-        align-items:flex-end;
-        justify-content:space-between;
-        gap:24px;
+        width:100%;
+        align-items:flex-start;
     }
     .texto-celu{
-        padding:0 0 20px 0;
+        padding:40px 0 0 6%;
+        font-size:18px;
     }
     .marco-celu{
-        width:150px;
-        margin-right:10px;
+        width:170px;
+        margin-right:8%;
     }
     .col-horizontal{
-        width:min(633px, 56%);
-        margin-left:0;
+        width:min(633px, 62%);
+        margin-left:10%;
     }
 }

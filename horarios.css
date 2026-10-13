@@ -193,48 +193,82 @@ header{
     margin-bottom:6px;
 }
 
-/* ===== CUADROS DE IMAGENES Y VIDEOS (agregado) ===== */
+/* ===== MARCOS DE IMAGEN Y VIDEO (como en el diseno de Canva) ===== */
 
-.cuadros{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
-    gap:clamp(16px, 4vw, 40px);
+.marcos{
+    display:flex;
+    flex-direction:column;
+    gap:24px;
     max-width:1000px;
     margin:0 auto;
 }
 
-.cuadro-item h3{
-    color:#ece8d9;
-    text-align:center;
-    margin-bottom:8px;
-    letter-spacing:1px;
-}
-
-.cuadro{
-    aspect-ratio:16 / 9;
-    background:#111;
-    border:3px solid #304d80;
-    border-radius:12px;
+/* fondo de ejemplo (cielo y pasto); se tapa solo cuando ponés tu foto o video */
+.marco{
     overflow:hidden;
-    display:grid;
-    place-items:center;
-    text-align:center;
-    color:#9aa4b5;
-    padding:0;
+    background:
+        radial-gradient(ellipse 14% 9% at 24% 20%, #fff 0 92%, transparent 100%),
+        radial-gradient(ellipse 18% 10% at 34% 24%, #fff 0 92%, transparent 100%),
+        radial-gradient(ellipse 55% 30% at 28% 108%, #c8e384 0 98%, transparent 100%),
+        radial-gradient(ellipse 70% 34% at 72% 112%, #8aa300 0 98%, transparent 100%),
+        linear-gradient(#bfe6ff, #eaf8ff);
 }
 
-/* lo que pongas adentro (foto, video o iframe) llena el cuadro */
-.cuadro > img,
-.cuadro > video,
-.cuadro > iframe{
+/* lo que pongas adentro (foto, video o iframe) llena el marco */
+.marco > img,
+.marco > video,
+.marco > iframe{
+    display:block;
     width:100%;
     height:100%;
     border:0;
     object-fit:cover;
 }
 
-.cuadro-nota{
-    margin-top:18px;
+.marco-horizontal{
+    width:100%;
+    aspect-ratio:633 / 375;
+    border-radius:10px;
+}
+
+.marco-celu{
+    width:38%;
+    aspect-ratio:261 / 542;
+    align-self:flex-end;
+    margin-right:6%;
+    border:3px solid #e6e9ee;
+    border-radius:22px;
+    transform:rotate(4.4deg);
+}
+
+.col-horizontal{
+    width:64%;
+    margin-left:4%;
+}
+
+.subtitulo{
     text-align:center;
-    line-height:1.6;
+    color:#ece8d9;
+    font-size:clamp(20px, 5vw, 40px);
+    margin-bottom:12px;
+    text-shadow:2px 2px 0 black, -1px -1px 0 black;
+}
+
+@media(min-width:769px){
+    .marcos{
+        flex-direction:row-reverse;
+        align-items:center;
+        justify-content:center;
+        gap:60px;
+        padding-bottom:50px;
+    }
+    .marco-celu{
+        width:220px;
+        align-self:center;
+        margin-right:0;
+    }
+    .col-horizontal{
+        width:min(633px, 65%);
+        margin-left:0;
+    }
 }

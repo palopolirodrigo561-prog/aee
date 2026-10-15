@@ -317,16 +317,23 @@ header{
     color: #ece8d9;
     text-align: center;
   }
-  .video-presentacion {
-    width: 800px;
-    max-width: 100%;
-    aspect-ratio: 16 / 9;
-    margin: 20px auto;
-  }
-  .video-presentacion iframe {
+.video-presentacion {
     width: 100%;
-    height: 100%;
+    max-width: 800px;      /* tamaño máximo del video */
+    margin: 20px auto;     /* "auto" a los lados lo centra */
+    display: block;
+}
+
+.video-presentacion iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;  /* mantiene la proporción */
     border: 0;
-  }
+    display: block;
+}
+
+/* Centra también el título del video */
+.marcos h2 {
+    text-align: center;
+}
 }
 }

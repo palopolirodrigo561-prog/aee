@@ -296,3 +296,15 @@ header{
         margin-left:10%;
     }
 }
+
+/* ===== TEXTO LARGO AL LADO DEL CELULAR ===== */
+
+.titulo-texto{
+    color:#ece8d9;
+    font-size:1.15em;
+    margin-bottom:10px;
+}
+
+.texto-celu p + p{
+    margin-top:10px;
+}

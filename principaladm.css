@@ -145,6 +145,14 @@ header{
     display:block;
 }
 
+.seccion p{
+    line-height:1.6;
+}
+
+.seccion p + p{
+    margin-top:14px;
+}
+
 /* CELULAR */
 @media(max-width:768px){
     .seccion{

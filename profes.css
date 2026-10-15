@@ -304,3 +304,7 @@ header{
     font-size:1.15em;
     margin-bottom:10px;
 }
+.col-horizontal{
+    margin-left:auto;
+    margin-right:auto;
+}

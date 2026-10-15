@@ -147,6 +147,7 @@ header{
 
 .seccion p{
     line-height:1.6;
+    font-size:clamp(20px, 1.7vw, 26px);
 }
 
 .seccion p + p{

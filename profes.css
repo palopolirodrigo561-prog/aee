@@ -304,7 +304,3 @@ header{
     font-size:1.15em;
     margin-bottom:10px;
 }
-
-.texto-celu p + p{
-    margin-top:10px;
-}
